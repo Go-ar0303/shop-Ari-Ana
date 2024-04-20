@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/* Add padding to containers */
+.container {
+  padding: 0 26px;
+  background-color: #333;
+  width: 100%;
+  color: #f2f2f2;
+  font-weight: 600;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  color: #f1f1f1;
+  background: #555;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+  color: #f1f1f1;
+  background: #555;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.reg {
+  background: rgb(57, 75, 57);
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.container-check .row {
+  /* IE10 */
+  display: flex;
+  /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 25px;
+}
+.container-check .contain {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.container-check .prod {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container-check input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.container-check label {
+  margin-bottom: 10px;
+  display: block;
+}
+.container-check .icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+.container-check .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.container-check .btn:hover {
+  background-color: #45a049;
+}
+.container-check a {
+  color: #2196F3;
+}
+.container-check hr {
+  border: 1px solid lightgrey;
+}
+.container-check span.price {
+  color: grey;
+}
+
+.row-ck {
+  /* IE10 */
+  display: flex;
+  /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 25px;
+}
+
+.col-25 {
+  /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+/*кнопка звонка*/
+.callback-bt {
+  background: #38a3fd;
+  border-radius: 50%;
+  box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3);
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: block;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  position: fixed;
+  right: 5%;
+  top: 18%;
+  z-index: 999;
+  transition: 0.3s ease-in-out;
+  animation: hoverWave linear 1s infinite;
+}
+
+.callback-bt:hover {
+  background: #fff;
+  border: 2px solid #38a3fd;
+}
+
+.callback-bt .text-call {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.callback-bt .text-call:after {
+  content: "\f095";
+  display: block;
+  font-family: fontawesome;
+  color: #fff;
+  font-size: 38px;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  animation: 1200ms ease 0s normal none 1 running shake;
+  animation-iteration-count: infinite;
+}
+
+.callback-bt .text-call:hover:after {
+  opacity: 0;
+}
+
+.callback-bt .text-call span {
+  color: #38a3fd;
+  display: block;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  font-family: "montserrat", Arial, Helvetica, sans-serif;
+}
+
+.callback-bt .text-call:hover span {
+  opacity: 1;
+}
+
+@keyframes hoverWave {
+  0% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  40% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  80% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+  }
+  100% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+  }
+}
+/* animations icon */
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+  }
+  10% {
+    transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    -webkit-transform: rotateZ(-30deg);
+  }
+  20% {
+    transform: rotateZ(15deg);
+    -ms-transform: rotateZ(15deg);
+    -webkit-transform: rotateZ(15deg);
+  }
+  30% {
+    transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-10deg);
+  }
+  40% {
+    transform: rotateZ(7.5deg);
+    -ms-transform: rotateZ(7.5deg);
+    -webkit-transform: rotateZ(7.5deg);
+  }
+  50% {
+    transform: rotateZ(-6deg);
+    -ms-transform: rotateZ(-6deg);
+    -webkit-transform: rotateZ(-6deg);
+  }
+  60% {
+    transform: rotateZ(5deg);
+    -ms-transform: rotateZ(5deg);
+    -webkit-transform: rotateZ(5deg);
+  }
+  70% {
+    transform: rotateZ(-4.28571deg);
+    -ms-transform: rotateZ(-4.28571deg);
+    -webkit-transform: rotateZ(-4.28571deg);
+  }
+  80% {
+    transform: rotateZ(3.75deg);
+    -ms-transform: rotateZ(3.75deg);
+    -webkit-transform: rotateZ(3.75deg);
+  }
+  90% {
+    transform: rotateZ(-3.33333deg);
+    -ms-transform: rotateZ(-3.33333deg);
+    -webkit-transform: rotateZ(-3.33333deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+  }
+}
+/* конец кнопки звонка */
+.returns {
+  width: 100%;
+  height: 800px;
+  background: #333;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+}
+.returns h1 {
+  color: red;
+}
+
+.title-header {
+  margin-left: 15px;
+}
+
+.nav-my {
+  width: 100%;
+  height: 65px;
+  background: #555;
+  color: #fff;
+  text-shadow: 2px 2px 0 #0a0a0a;
+  margin-top: 3px;
+  margin-bottom: -22px;
+  padding: 5px;
+  text-align: left;
+}
+
+#mycart {
+  background: #e2dfdf;
+  height: 650px;
+}
+
+#ct-img {
+  width: 80px;
+  height: 80px;
+}
+
+.table2 {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.table2 th, .table2 td {
+  text-align: left;
+  padding: 16px;
+}
+.table2 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.buy-pd {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+}
+
+.minus,
+.plus {
+  margin: 0;
+  padding: 5px;
+  height: 35px;
+  width: 35px;
+}
+
+.qty-input {
+  height: 35px;
+  width: 85px;
+  text-align: center;
+  margin: 0;
+}/*# sourceMappingURL=style2.css.map */

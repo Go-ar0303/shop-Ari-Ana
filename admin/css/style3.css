@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Farsan&display=swap");
+:root {
+  --main: orange;
+  --bg: #0B1218;
+  --bg-body: #131D28;
+}
+
+* {
+  font-family: "Farsan", cursive;
+  font-weight: 500;
+  font-style: normal;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: var(--bg-body);
+  color: #fff;
+  padding: 2rem 5rem;
+  font-size: 25px;
+}
+.container h4 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+form input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+form input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+form .text {
+  width: 100%;
+  height: auto;
+}
+form .check {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+form .btn_add_cateory,
+form .btn_add_product,
+form .btn_update_category,
+form .btn_update_product {
+  padding: 0.5rem 1.8rem;
+  font-size: 22px;
+  font-weight: 600;
+}
+form .btn-edit {
+  padding: 0.5rem 1.8rem;
+  font-size: 22px;
+  font-weight: 600;
+  color: #094a75;
+  background: rgb(102, 160, 199);
+}
+form .btn-delete {
+  padding: 0.5rem 1.8rem;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  background: orangered;
+}
+
+.card {
+  background: var(--bg-body);
+  color: #fff;
+  width: 100%;
+}
+
+.card-body {
+  margin: 20px 0;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 25px;
+  text-shadow: #df6969;
+}/*# sourceMappingURL=style3.css.map */

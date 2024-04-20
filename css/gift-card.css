@@ -1,0 +1,81 @@
+@charset "UTF-8";
+.title_gift {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 85px;
+  width: 35%;
+}
+.title_gift h3, .title_gift p {
+  font-size: 22px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgb(121, 108, 108), 0 0 1em rgba(75, 75, 65, 0.863), 0 0 0.2em rgba(228, 230, 218, 0.829);
+}
+.title_gift span {
+  font-style: italic;
+  font-weight: 500;
+  width: 25%;
+}
+
+/* Блок картинки */
+.rotate-block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Изображение */
+.change-img {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  perspective: 1000px;
+  /* Рамка */
+}
+
+.change-img:hover .front-side-img {
+  transform: rotateY(180deg);
+}
+
+.change-img:hover .back-side-img {
+  transform: rotateY(360deg);
+}
+
+/* Стороны изображения */
+.front-side-img,
+.back-side-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.back-side-img {
+  backface-visibility: hidden;
+}
+
+.front-side-img img {
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  border-radius: 8%;
+}
+
+.back-side-img img {
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+  border-radius: 8%;
+  /* Отражаем изображение по горизонтали */
+}
+
+.back-side-img {
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=gift-card.css.map */
